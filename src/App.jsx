@@ -1,16 +1,21 @@
+// App.jsx
 
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Content from './components/Content';
+// import Home from './Home';
+// import About from './About';
+// import Portfolio from './Portfolio';
+// import Contact from './Contact';
 
-function App() {
-  
-
+const App = () => {
   return (
-    <>
-      <h1 className="text-3xl text-red-600 font-bold underline">
-      Hello world! port folio
-    </h1>
-    </>
-  )
-}
+    <Router>
+        <Navbar />
+        <Content/>
+    </Router>
+  );
+};
 
-export default App
+export default App;
