@@ -37,7 +37,7 @@ const Content = () => {
               <a href="" className='px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-br from-cyan-600 to-cyan-700 text-white' >
                 Download CV
               </a>
-              <a href="" className='px-6 py-3 w-full rounded-xl mr-4 border-cyan-800 hover:bg-gradient-to-br from-cyan-600 to-cyan-700 text-white hover:border-none'>
+              <a href="" className='px-6 py-3 w-full rounded-xl mr-4 border-cyan-800  hover:bg-gradient-to-br from-cyan-600 to-cyan-700 text-white hover:border-none'>
                 Contact
               </a>
           </div>
