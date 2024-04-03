@@ -1,15 +1,15 @@
 import React from 'react';
-import {TypeAnimation} from "react-type-animation"
-import image from './Images/c-8676__1_-removebg-preview.png'
-import image1 from './Images/c-8676 (1).jpg'
+import { TypeAnimation } from "react-type-animation";
+import image from './Images/c-8676__1_-removebg-preview.png';
+import image1 from './Images/c-8676 (1).jpg';
 
 const Content = () => {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-3 gap-8  mx-auto py-8 bg-gray-800'>
       <div className='my-auto mx-auto'>
-          <div className='rounded-full overflow-hidden  w-50 '>
-              <img src={image} className='' alt="" />
-          </ div>
+          <div className='rounded-full overflow-hidden shadow-cyan-300'>
+              <img src={image} className='h-72  object-cover transition duration-300 transform hover:scale-105 ' alt="" />
+          </div>
       </div>
 
       <div className='col-span-2 px-5 mt-16'>
