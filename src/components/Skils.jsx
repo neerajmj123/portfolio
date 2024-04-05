@@ -11,31 +11,31 @@ const Skills = () => {
             <h2 className="text-white text-2xl md:text-4xl font-bold m-4">
                 My <br /> Tech <br /> Stack
             </h2>
-            <div className="flex flex-col items-center m-4 sm:my-0">
+            <div className="flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]">
                 <img src={css} alt="" width={100} height={100} />
                 <p className="mt-2 text-white">CSS</p>
             </div>
-            <div className="flex flex-col items-center m-4 sm:my-0">
-                <img src={html} alt="" width={100} height={100} />
+            <div className="flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]">
+                <img src={html} alt=""    />
                 <p className="mt-2 text-white">HTML</p>
 
             </div>
-            <div className="flex flex-col items-center m-4 sm:my-0">
+            <div className="flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]">
                 <img src={java} alt="" width={100} height={100} />
                 <p className="mt-2 text-white">JavaScript</p>
 
             </div>
-            <div className="flex flex-col items-center m-4 sm:my-0">
+            <div className="flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px]">
                 <img src={react} alt="" width={100} height={100} />
                 <p className="mt-2 text-white">React</p>
 
             </div>
-            <div className="flex flex-col items-center m-4 sm:my-0">
+            <div className="flex flex-col items-center m-4 sm:my-0 w-[40px] md:w-[100px] ">
                 <img src={tailwind} alt="" width={100} height={100} />
                 <p className="mt-2 text-white">Tailwind</p>
 
             </div>
-        </div>
+        </div>  
     );
 }
 
