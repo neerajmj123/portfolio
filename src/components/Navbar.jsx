@@ -1,80 +1,34 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [nav, setNav] = useState(false);
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
+  const handleNav = () => {
+    setNav(!nav);
   };
 
   return (
-    <nav className="bg-gray-800 py-4">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center">
-            <Link to="/" className="text-cyan-300 text-lg font-bold animate-pulse">
-              NJ
-            </Link>
-          </div>
-          <div className="hidden md:block">
-            <ul className="flex space-x-4">
-              <li>
-                <Link to="/" className="text-cyan-300 hover:text-white hover:border-b-2 border-cyan-300 ">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-cyan-300 hover:text-white hover:border-b-2 border-cyan-300">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/portfolio" className="text-cyan-300 hover:text-white hover:border-b-2 border-cyan-300">
-                  Work
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-cyan-300 hover:text-white hover:border-b-2 border-cyan-300">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="md:hidden">
-            <button onClick={toggleNavbar} className="text-cyan-300 focus:outline-none">
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-16 6h16"} />
-              </svg>
-            </button>
-          </div>
-        </div>
+    <div className="bg-gray-800 text-cyan-300 h-[100px] mx-auto flex justify-between items-center">
+      <h1 className='text-3xl font-bold text-cyan-300 ml-4'>Nj</h1>
+      <ul className='hidden md:flex'>
+        <li className='p-5'><a href="#about" className='hover:border-b-2 border-cyan-300'>About</a></li>
+        <li className='p-5'><a href="#work" className='hover:border-b-2 border-cyan-300'> Work</a></li>
+        <li className='p-5 '><a href="#contact" className='hover:border-b-2 border-cyan-300 mb-4'>Contact</a></li>
+      </ul>
+      <div onClick={handleNav} className='block md:hidden'>
+        {nav ? <AiOutlineClose size={25} className='mr-9'/> : <AiOutlineMenu size={25} className='mr-9'/>}
       </div>
-      {/* Animation added here */}
-      {isOpen && (
-        <div className="md:hidden px-2 pt-2 pb-3 space-y-1 transition-all duration-500 ease-in-out transform origin-top">
-          <Link to="/" className="text-cyan-300 block hover:text-white">
-            Home
-          </Link>
-          <Link to="/about" className="text-cyan-300 block hover:text-white ">
-            About
-          </Link>
-          <Link to="/portfolio" className="text-cyan-300 block hover:text-white">
-            Work
-          </Link>
-          <Link to="/contact" className="text-cyan-300 block hover:text-white">
-            Contact
-          </Link>
-        </div>
-      )}
-    </nav>
+      <div className={nav ? 'fixed h-full left-0 top-0 w-[60%] bg-gray-800 ease-in-out duration-500'
+        : 'fixed left-[-100%]'}>
+        <h1 className='tet-3xl font-bold text-cyan-300 m-4'>Nj</h1>
+        <ul className='p-8 text-2xl'>
+          <li className='p-2'><a href="#about">About</a></li>
+          <li className='p-2'><a href="#work">Work</a></li>
+          <li className='p-2'><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   );
 };
 
